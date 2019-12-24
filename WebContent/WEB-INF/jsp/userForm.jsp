@@ -1,55 +1,87 @@
-<form action="//submit.form" id="EmploymentApplication100" method="post" onsubmit="return ValidateForm(this);">
-<script type="text/javascript">
-function ValidateForm(frm) {
-if (frm.First_Name.value == "") { alert('First name is required.'); frm.First_Name.focus(); return false; }
-if (frm.Last_Name.value == "") { alert('Last name is required.'); frm.Last_Name.focus(); return false; }
-if (frm.Email_Address.value == "") { alert('Email address is required.'); frm.Email_Address.focus(); return false; }
-if (frm.Email_Address.value.indexOf("@") < 1 || frm.Email_Address.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.Email_Address.focus(); return false; }
-if (frm.Position.value == "") { alert('Position is required.'); frm.Position.focus(); return false; }
-if (frm.Phone.value == "") { alert('Phone is required.'); frm.Phone.focus(); return false; }
-return true; }
-</script>
-<table border="0" cellpadding="5" cellspacing="0">
-<tr> <td style="width: 50%">
-<label for="First_Name"><b>First name *</b></label><br />
-<input name="First_Name" type="text" maxlength="50" style="width: 260px" />
-</td> <td style="width: 50%">
-<label for="Last_Name"><b>Last name *</b></label><br />
-<input name="Last_Name" type="text" maxlength="50" style="width: 260px" />
-</td> </tr> <tr> <td colspan="2">
-<label for="Email_Address"><b>Email *</b></label><br />
-<input name="Email_Address" type="text" maxlength="100" style="width: 535px" />
-</td> </tr> <tr> <td colspan="2">
-<label for="Portfolio"><b>Portfolio website</b></label><br />
-<input name="Portfolio" type="text" maxlength="255" value="http://" style="width: 535px" />
-</td> </tr> <tr> <td colspan="2">
-<label for="Position"><b>Position you are applying for *</b></label><br />
-<input name="Position" type="text" maxlength="100" style="width: 535px" />
-</td> </tr> <tr> <td>
-<label for="Salary"><b>Salary requirements</b></label><br /> <input name="Salary" type="text" maxlength="50" style="width: 260px" /> </td> <td>
-<label for="StartDate"><b>When can you start?</b></label><br />
-<input name="StartDate" type="text" maxlength="50" style="width: 260px" />
-</td> </tr> <tr> <td>
-<label for="Phone"><b>Phone *</b></label><br />
-<input name="Phone" type="text" maxlength="50" style="width: 260px" />
-</td> <td>
-<label for="Fax"><b>Fax</b></label><br />
-<input name="Fax" type="text" maxlength="50" style="width: 260px" />
-</td> </tr> <tr> <td colspan="2">
-<label for="Relocate"><b>Are you willing to relocate?</b></label><br />
-<input name="Relocate" type="radio" value="Yes" checked="checked" /> Yes      
-<input name="Relocate" type="radio" value="No" /> No      
-<input name="Relocate" type="radio" value="NotSure" /> Not sure
-</td> </tr> <tr> <td colspan="2">
-<label for="Organization"><b>Last company you worked for</b></label><br />
-<input name="Organization" type="text" maxlength="100" style="width: 535px" />
-</td> </tr> <tr> <td colspan="2">
-<label for="Reference"><b>Reference / Comments / Questions</b></label><br />
-<textarea name="Reference" rows="7" cols="40" style="width: 535px"></textarea>
-</td> </tr> <tr> <td colspan="2" style="text-align: center;">
-<div style="float: right"> <a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
-<script src="https://www.100forms.com/js/FORMKEY:WF9MSZYUYCWJ/SEND:my@email.com" type="text/javascript"></script>
-<input name="skip_submit" type="submit" value="Send Application" />
-</td> </tr>
-</table>
+<form method="post" action="//submit.form" onSubmit="return validateForm();">
+<div style="width: 400px;">
+</div>
+<div style="padding-bottom: 18px;font-size : 24px;">Hotel Reservation</div>
+<div style="display: flex; padding-bottom: 18px;width : 450px;">
+<div style=" margin-left : 0; margin-right : 1%; width : 49%;">First name<span style="color: red;"> *</span><br/>
+<input type="text" id="data_2" name="data_2" style="width: 100%;" class="form-control"/>
+</div>
+<div style=" margin-left : 1%; margin-right : 0; width : 49%;">Last name<span style="color: red;"> *</span><br/>
+<input type="text" id="data_3" name="data_3" style="width: 100%;" class="form-control"/>
+</div>
+</div><div style="padding-bottom: 18px;">Phone<span style="color: red;"> *</span><br/>
+<input type="text" id="data_4" name="data_4" style="width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;">Email<span style="color: red;"> *</span><br/>
+<input type="text" id="data_5" name="data_5" style="width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;">Arrival date<span style="color: red;"> *</span><br/>
+<input type="text" id="data_6" name="data_6" style="width : 250px;" class="form-control"/>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/pikaday.min.js" type="text/javascript"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/css/pikaday.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">new Pikaday({ field: document.getElementById('data_6') });</script>
+<div style="padding-bottom: 18px;">Departure date<span style="color: red;"> *</span><br/>
+<input type="text" id="data_7" name="data_7" style="width : 250px;" class="form-control"/>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/pikaday.min.js" type="text/javascript"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/css/pikaday.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">new Pikaday({ field: document.getElementById('data_7') });</script>
+<div style="padding-bottom: 18px;">Number of adults<span style="color: red;"> *</span><br/>
+<input type="number" id="data_8" name="data_8" style="width : 250px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;">Number of children<br/>
+<input type="number" id="data_9" name="data_9" style="width : 250px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;">Questions / Comments<br/>
+<textarea id="data_10" false name="data_10" style="width : 450px;" rows="6" class="form-control"></textarea>
+</div>
+<div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit"/></div>
+<div>
+<div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
+<script src="https://www.100forms.com/js/FORMKEY:UNMDHALR3545/SEND:my@email.com" type="text/javascript"></script>
+</div>
 </form>
+
+<script type="text/javascript">
+function validateForm() {
+if (isEmpty(document.getElementById('data_2').value.trim())) {
+alert('First name is required!');
+return false;
+}
+if (isEmpty(document.getElementById('data_3').value.trim())) {
+alert('Last name is required!');
+return false;
+}
+if (isEmpty(document.getElementById('data_4').value.trim())) {
+alert('Phone is required!');
+return false;
+}
+if (isEmpty(document.getElementById('data_5').value.trim())) {
+alert('Email is required!');
+return false;
+}
+if (!validateEmail(document.getElementById('data_5').value.trim())) {
+alert('Email must be a valid email address!');
+return false;
+}
+if (isEmpty(document.getElementById('data_6').value.trim())) {
+alert('Arrival date is required!');
+return false;
+}
+if (isEmpty(document.getElementById('data_7').value.trim())) {
+alert('Departure date is required!');
+return false;
+}
+if (isEmpty(document.getElementById('data_8').value.trim())) {
+alert('Number of adults is required!');
+return false;
+}
+return true;
+}
+function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+function validateEmail(email) {
+var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+return isEmpty(email) || re.test(email);
+}
+</script>
