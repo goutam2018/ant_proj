@@ -12,11 +12,11 @@
 <form:form method="POST" commandName="user">
 	<table>
 		<tr>
-			<td>Student Name :</td>
+			<td>Wipro_demo Login :</td>
 			<td><form:input path="name" /></td>
 		</tr>
 		<tr>
-			<td>Student Password :</td>
+			<td>Wipro Password :</td>
 			<td><form:password path="password" /></td>
 		</tr>
 		<tr>
